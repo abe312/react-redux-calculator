@@ -1,0 +1,15 @@
+.header {
+  font-family: 'Mansalva', cursive;
+  font-size: 2.5rem;
+  color: var(--white);
+  margin-top: 2%;
+  margin-bottom: -5%;
+  text-align: center;
+  color: #c7c7c7;
+}
+
+@media (max-width: 568px) {
+  .header {
+    margin-bottom: 7%;
+  }
+}

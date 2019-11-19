@@ -1,0 +1,122 @@
+.calc {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(1fr, 50px)) minmax(0.7fr, 50px);
+  grid-template-rows: repeat(2, 40px);
+  grid-auto-rows: 55px;
+  grid-gap: 5px;
+  place-items: stretch stretch;
+  border: 5px solid black;
+  font-weight: 600;
+  font-size: 1.3rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #e3e3e3;
+
+  -webkit-box-shadow: 2px 2px 5px 15px rgba(215, 215, 215, 0.19);
+  -moz-box-shadow: 2px 2px 5px 15px rgba(215, 215, 215, 0.19);
+  box-shadow: 2px 2px 5px 15px rgba(215, 215, 215, 0.19);
+}
+
+.item.tall__key {
+  grid-row: span 2;
+  background: rgb(0, 68, 102);
+}
+
+.item {
+  background-color: #4d4d4d;
+  display: inline-grid;
+  place-items: center;
+  margin: 0;
+}
+
+.item:active,
+.press {
+  -webkit-box-shadow: inset -5px -23px 67px 1px rgba(0, 0, 0, 0.71);
+  -moz-box-shadow: inset -5px -23px 67px 1px rgba(0, 0, 0, 0.71);
+  box-shadow: inset -5px -23px 67px 1px rgba(0, 0, 0, 0.71);
+}
+.item:hover {
+  position: relative;
+  cursor: pointer;
+  border: 2px solid #c7c7c740;
+}
+
+.display {
+  grid-column: span 4;
+  background: var(--black);
+  display: inline-grid;
+  place-items: end;
+  padding-right: 9%;
+  padding-bottom: 7px;
+}
+.secondary__display {
+  color: orange;
+  font-size: 1.1rem;
+}
+.primary__display {
+  font-size: 1.7rem;
+}
+
+.wide__key {
+  grid-column: span 2;
+}
+.ac {
+  background: rgba(220, 5, 5, 0.9);
+}
+.container {
+  width: 50%;
+  margin: auto;
+  margin-top: 25%;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 100%;
+    margin: auto;
+    margin-top: 10%;
+  }
+  .calc {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    width: 80%;
+    margin: auto;
+    margin-top: 10%;
+  }
+}
+
+@media (max-width: 568px) {
+  .container {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.scrollable-content {
+  /* margin-left: -10000px; */
+  margin-bottom: -15px;
+  padding-bottom: 15px;
+  direction: rtl;
+
+  overflow-x: scroll;
+  /*  // manage scrollbar content overflow settings */
+  overflow-y: hidden;
+}
+.scrollable-content::-webkit-scrollbar {
+  /* // manage scrollbar width here */
+
+  width: 100%;
+}
+.scrollable-content::-webkit-scrollbar * {
+  /* // manage scrollbar background color here */
+
+  background: transparent;
+}
+.scrollable-content::-webkit-scrollbar-thumb {
+  /* // manage scrollbar thumb background color here */
+
+  background: rgba(236, 229, 229, 0.2) !important;
+}
