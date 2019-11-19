@@ -99,7 +99,7 @@
   /* margin-left: -10000px; */
   margin-bottom: -15px;
   padding-bottom: 15px;
-  direction: rtl;
+  direction: ltr;
 
   overflow-x: scroll;
   /*  // manage scrollbar content overflow settings */
